@@ -1,0 +1,10 @@
+*~
+.~*
+.idea/
+.bsp/
+nohup.out
+*.swp
+*.iml
+target/
+*.tmp
+.metals/
