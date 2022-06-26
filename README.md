@@ -1,4 +1,4 @@
-# ZIO worksheet [![][ZIOWorksheetManagerImg]][ZIOWorksheetManagerLnk] ![Scala CI][scalaci-master]
+# ZIO worksheet [![][ZIOWorksheetManagerImg]][ZIOWorksheetManagerLnk]
 
 A small library to simplify ZIO developer experience in the context of REPL sessions, scripts or worksheets. It must
 only be used in this context, for example in real world project you should use `ZIOAppDefault` or `ZIOSpecDefault`
