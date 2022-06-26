@@ -1,7 +1,7 @@
 # ZIO worksheet
 
 A small library to simplify ZIO developer experience in the context of REPL sessions, scripts or worksheets. It must
-only be used in this context, for example in real world project you should always use `ZIOAppDefault` or `ZIOSpecDefault`
+only be used in this context, for example in real world project you should use `ZIOAppDefault` or `ZIOSpecDefault`
 as your main starting points for your ZIO project.
 
 This library brings various helpers in order to make your code examples the most simple possible for learning, demo,
