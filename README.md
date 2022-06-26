@@ -1,4 +1,4 @@
-# ZIO worksheet
+# ZIO worksheet [![][ZIOWorksheetManagerImg]][ZIOWorksheetManagerLnk] ![Scala CI][scalaci-master]
 
 A small library to simplify ZIO developer experience in the context of REPL sessions, scripts or worksheets. It must
 only be used in this context, for example in real world project you should use `ZIOAppDefault` or `ZIOSpecDefault`
@@ -17,3 +17,6 @@ import zio.*
 val app = Console.printLine("Hello world !")
 app.unsafeRun
 ```
+
+[ZIOWorksheetManagerImg]: https://img.shields.io/maven-central/v/fr.janalyse/zio-worksheet_3.svg
+[ZIOWorksheetManagerLnk]: https://search.maven.org/#search%7Cga%7C1%7Cfr.janalyse.zio-worksheet
