@@ -13,6 +13,7 @@ an effect synchronously and get its results :
 //> using lib "dev.zio::zio-worksheet:2.0.0.0"
 
 import zio.*
+import zio.worksheet.*
 
 val app = Console.printLine("Hello world !")
 app.unsafeRun
