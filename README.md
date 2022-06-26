@@ -10,7 +10,7 @@ an effect synchronously and get its results :
 
 ```scala
 //> using scala  "3.1.3"
-//> using lib "dev.zio::zio-worksheet:2.0.0.0"
+//> using lib "fr.janalyse::zio-worksheet:2.0.0.0"
 
 import zio.*
 import zio.worksheet.*
