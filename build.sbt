@@ -14,7 +14,7 @@ scmInfo := Some(
 scalaVersion := "3.1.3"
 
 lazy val versions = new {
-  val zio         = "2.0.0"
+  val zio         = "2.0.2"
 }
 
 libraryDependencies ++= Seq(
