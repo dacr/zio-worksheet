@@ -20,4 +20,4 @@ app.unsafeRun
 ```
 
 [ZIOWorksheetManagerImg]: https://img.shields.io/maven-central/v/fr.janalyse/zio-worksheet_3.svg
-[ZIOWorksheetManagerLnk]: https://search.maven.org/#search%7Cga%7C1%7Cfr.janalyse.zio-worksheet
+[ZIOWorksheetManagerLnk]: https://mvnrepository.com/artifact/fr.janalyse/zio-worksheet
