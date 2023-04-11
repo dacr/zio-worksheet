@@ -5,7 +5,7 @@ package object worksheet {
    */
   implicit class RunSyntax[A](io: ZIO[Any, Any, A]) {
     def unsafeRun: A =
-      Unsafe.unsafeCompat { implicit u =>
+      Unsafe.unsafe { implicit u =>
         Runtime.default.unsafe.run(io).getOrThrowFiberFailure()
       }
   }
