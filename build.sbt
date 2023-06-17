@@ -11,10 +11,10 @@ scmInfo := Some(
   )
 )
 
-scalaVersion := "3.2.2"
+scalaVersion := "3.3.0"
 
 lazy val versions = new {
-  val zio = "2.0.13"
+  val zio = "2.0.15"
 }
 
 libraryDependencies ++= Seq(
