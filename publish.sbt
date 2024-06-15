@@ -4,7 +4,7 @@ releaseCrossBuild := true
 releasePublishArtifactsAction := PgpKeys.publishSigned.value
 publishMavenStyle := true
 Test / publishArtifact := false
-publishTo := Some(if (isSnapshot.value) Opts.resolver.sonatypeSnapshots else Opts.resolver.sonatypeStaging)
+publishTo := sonatypePublishTo.value //Some(if (isSnapshot.value) Opts.resolver.sonatypeSnapshots else Opts.resolver.sonatypeStaging)
 
 sonatypeCredentialHost := "oss.sonatype.org" // legacy host
 sonatypeRepository := "https://oss.sonatype.org/service/local"
