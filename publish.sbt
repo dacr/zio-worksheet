@@ -6,8 +6,13 @@ publishMavenStyle := true
 Test / publishArtifact := false
 publishTo := Some(if (isSnapshot.value) Opts.resolver.sonatypeSnapshots else Opts.resolver.sonatypeStaging)
 
-//Global / PgpKeys.useGpg := true      // workaround with pgp and sbt 1.2.x
-//pgpSecretRing := pgpPublicRing.value // workaround with pgp and sbt 1.2.x
+sonatypeCredentialHost := "oss.sonatype.org" // legacy host
+sonatypeRepository := "https://oss.sonatype.org/service/local"
+//sonatypeCredentialHost := "s01.oss.sonatype.org" // for account new account after January 2021
+//sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
+
+Global / PgpKeys.useGpg := true      // workaround with pgp and sbt 1.2.x
+pgpSecretRing := pgpPublicRing.value // workaround with pgp and sbt 1.2.x
 
 pomExtra in Global := {
   <developers>
