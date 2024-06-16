@@ -12,6 +12,8 @@ publishTo := {
   else Some("releases" at nexus + "service/local/staging/deploy/maven2")
 }
 
+releasePublishArtifactsAction := PgpKeys.publishSigned.value
+
 releaseTagComment := s"Releasing ${(ThisBuild / version).value}"
 releaseCommitMessage := s"Setting version to ${(ThisBuild / version).value}"
 releaseNextCommitMessage := s"[ci skip] Setting version to ${(ThisBuild / version).value}"
