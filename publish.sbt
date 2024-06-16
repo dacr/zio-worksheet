@@ -1,27 +1,15 @@
 pomIncludeRepository := { _ => false }
-
-releaseCrossBuild := true
-releasePublishArtifactsAction := PgpKeys.publishSigned.value
 publishMavenStyle := true
 Test / publishArtifact := false
-publishTo := sonatypePublishTo.value //Some(if (isSnapshot.value) Opts.resolver.sonatypeSnapshots else Opts.resolver.sonatypeStaging)
+versionScheme := Some("semver-spec")
 
-sonatypeCredentialHost := "oss.sonatype.org" // legacy host
-sonatypeRepository := "https://oss.sonatype.org/service/local"
-//sonatypeCredentialHost := "s01.oss.sonatype.org" // for account new account after January 2021
-//sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
-
-Global / PgpKeys.useGpg := true      // workaround with pgp and sbt 1.2.x
-pgpSecretRing := pgpPublicRing.value // workaround with pgp and sbt 1.2.x
-
-pomExtra in Global := {
-  <developers>
-    <developer>
-      <id>dacr</id>
-      <name>David Crosson</name>
-      <url>https://github.com/dacr</url>
-    </developer>
-  </developers>
+//publishTo := sonatypePublishTo.value //Some(if (isSnapshot.value) Opts.resolver.sonatypeSnapshots else Opts.resolver.sonatypeStaging)
+publishTo := {
+  // For accounts created after Feb 2021:
+  // val nexus = "https://s01.oss.sonatype.org/"
+  val nexus = "https://oss.sonatype.org/"
+  if (isSnapshot.value) Some("snapshots" at nexus + "content/repositories/snapshots")
+  else Some("releases" at nexus + "service/local/staging/deploy/maven2")
 }
 
 releaseTagComment := s"Releasing ${(ThisBuild / version).value}"
