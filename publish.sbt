@@ -3,7 +3,6 @@ publishMavenStyle := true
 Test / publishArtifact := false
 versionScheme := Some("semver-spec")
 
-//publishTo := sonatypePublishTo.value //Some(if (isSnapshot.value) Opts.resolver.sonatypeSnapshots else Opts.resolver.sonatypeStaging)
 publishTo := {
   // For accounts created after Feb 2021:
   // val nexus = "https://s01.oss.sonatype.org/"
@@ -22,14 +21,14 @@ import ReleaseTransformations._
 releaseProcess := Seq[ReleaseStep](
   checkSnapshotDependencies,
   inquireVersions,
-  //runClean,
+  runClean,
   runTest,
   setReleaseVersion,
   commitReleaseVersion,
   tagRelease,
   publishArtifacts,
+  releaseStepCommand("sonatypeReleaseAll"),
   setNextVersion,
   commitNextVersion,
-  releaseStepCommand("sonatypeReleaseAll"),
   pushChanges
 )
