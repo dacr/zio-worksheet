@@ -1,6 +1,6 @@
-organization := "fr.janalyse"
 name         := "zio-worksheet"
-homepage     := Some(url("https://github.com/dacr/zio-worksheet"))
+organization := "fr.janalyse"
+description  := "To simplify ZIO usage within scripts or worksheets"
 
 licenses += "Apache 2" -> url(s"https://www.apache.org/licenses/LICENSE-2.0.txt")
 
@@ -19,13 +19,8 @@ libraryDependencies ++= Seq(
 
 testFrameworks += new TestFramework("zio.test.sbt.ZTestFramework")
 
-scmInfo := Some(
-  ScmInfo(
-    url(s"https://github.com/dacr/zio-worksheet.git"),
-    "scm:git@github.com:dacr/zio-worksheet.git"
-  )
-)
-
+homepage   := Some(url("https://github.com/dacr/zio-worksheet"))
+scmInfo    := Some(ScmInfo(url(s"https://github.com/dacr/zio-worksheet.git"), "scm:git@github.com:dacr/zio-worksheet.git"))
 developers := List(
   Developer(
     id = "dacr",
