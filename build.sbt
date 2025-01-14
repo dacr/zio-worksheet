@@ -4,10 +4,10 @@ description  := "To simplify ZIO usage within scripts or worksheets"
 
 licenses += "Apache 2" -> url(s"https://www.apache.org/licenses/LICENSE-2.0.txt")
 
-scalaVersion := "3.5.1"
+scalaVersion := "3.3.4"
 
 lazy val versions = new {
-  val zio = "2.1.9"
+  val zio = "2.1.14"
 }
 
 libraryDependencies ++= Seq(
