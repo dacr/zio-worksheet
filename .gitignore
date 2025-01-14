@@ -8,3 +8,6 @@ nohup.out
 target/
 *.tmp
 .metals/
+
+# Security purposes
+.envrc
