@@ -9,8 +9,8 @@ proof of concepts purposes. It brings a `.unsafeRun` function (originally writte
 an effect synchronously and get its results :
 
 ```scala
-//> using scala  "3.2.2"
-//> using lib "fr.janalyse::zio-worksheet:2.0.12.0"
+//> using scala  "3.6.4"
+//> using lib "fr.janalyse::zio-worksheet:2.0.17.0"
 
 import zio.*
 import zio.worksheet.*
